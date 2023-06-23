@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <!-- Array and Object  -->
+
+    <p id="arraywithobj"></p>
+    <p id="objwitharray"></p>
+    
+    <script>
+       //car 
+    let carArray =[4,"baleno",5,"maruti suzuki"]
+                   
+    let carObj ={
+             average:18,
+             seats:5,
+             name:"maruti suzuki",
+             wheels:4,
+             model:"baleno",
+             
+       }
+
+    //    console.log(carObj.name);
+
+
+
+      //
+    //   array with objects
+    // example 
+      let x =[23,"India",false,{name:"code first",addres:"Pune"},{age:25,mobile:34398394}];
+       console.log(x);
+       document.getElementById("arraywithobj").innerHTML=x;
+    //   object with arrays
+
+    let y ={
+         address:["pune","mumbai"],
+         mobile:[32343434,595895859]
+    };
+    console.log(y);
+    document.getElementById("objwitharray").innerHTML=y;
+
+
+       
+    </script>
+    
+</body>
+</html>
