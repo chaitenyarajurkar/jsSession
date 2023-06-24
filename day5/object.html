@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p id="name"></p>
+    <p id="age"></p>
+    <p id="address"></p>
+
+    <script>
+       let person ={};   //empty object and intialising an object
+            person.name = "ayush";
+            person.age = 45;
+
+            person.name = "ankita";
+
+            person.mobile =[934893843984,904930493049,893898934,8938493];
+            person.address=["pune", "mumbai"];
+            
+
+            console.log(person)
+            document.getElementById("name").innerHTML = person.name;
+            document.getElementById("age").innerHTML = person.age;
+            document.getElementById("address").innerHTML = person.address[0];
+
+        
+
+
+    </script>
+    
+</body>
+</html>
