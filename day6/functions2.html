@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <!-- with parameter functions -->
+   <input id="firstval" type="text"  placeholder="enter first number" />
+   <input id="secondval" type="number" placeholder="enter second number" />
+   <button onclick="addition()" >Add numbers</button>
+   <p id="result"></p>
+
+   <p id="multiresult"></p>
+          <!-- here parameter ,without parameter and nested functions are explained -->
+    <script>
+           
+        function addition(){
+          let x = parseInt(document.getElementById("firstval").value);
+          let y = parseInt(document.getElementById("secondval").value);
+    
+           document.getElementById("result").innerHTML = x + y;
+           multiplication(x , y)
+        }
+       
+        // function onChangeAddition(){
+        //         console.log("onchange call", document.getElementById("firstval").value);
+        //       x  =  document.getElementById("firstval").value;
+        // }
+
+    //  addition();
+
+    function multiplication(x,y){
+        document.getElementById("multiresult").innerHTML = x * y;
+    }
+    </script>
+</body>
+</html>
