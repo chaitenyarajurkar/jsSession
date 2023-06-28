@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p id="switch"></p>
+     <button onclick="toggle()" >Tooggle</button>
+    <!-- Logical Opertor -->
+    
+      <!-- && ==>And condition
+      || ==> OR condition
+      !  ==> not condition -->
+
+      <!-- And condition -->
+    <!-- x    &&     y
+        true       true      true
+        true       false     false
+        false      true      false
+        false      false     false  --> 
+
+        <script>
+            let x = false ;
+            let y = true;
+            let z  = x && y;
+            console.log(z);
+
+
+        </script>
+
+<!-- || ==> OR condition -->
+
+           <!-- x    ||    y
+        true       true      true
+        true       false     true
+        false      true      true
+        false      false     false  --> 
+        <script>
+            let a = false ;
+            let b = true;
+            let c  = a || b;
+            console.log(c);
+
+
+        </script>
+
+
+<!-- !  ==> not condition  -->
+     <script>
+        let r = true;
+        // let g = !r
+        // console.log(g);
+        document.getElementById("switch").innerHTML = r;
+        function toggle(){
+             r = !r;
+             document.getElementById("switch").innerHTML = r;
+        }
+
+     </script>
+
+</body>
+</html>

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+<!--      
+    1)IF , if/else , nested if/else
+    2)for loop
+    3)for in loop
+    4)break continue
+    5)switch case 
+    6)while do while 
+     -->
+      <input type="text" id="val" />
+      <button onclick="addVal()">Add val</button>
+      <p id="result"></p>
+     <script>
+            
+
+            function addVal(){
+                let inutvalue = document.getElementById("val").value;
+              if(inutvalue==="sunday"){
+                 console.log("yes it is sunday");
+                 document.getElementById("result").innerHTML= "yes it is sunday";
+                
+              }
+              else if(inutvalue==="monday"){
+                document.getElementById("result").innerHTML= "yes it is monday";
+              }
+              else{
+                console.log("No it is not sunday");
+                document.getElementById("result").innerHTML= "No it is not sunday";
+              }
+
+            //   if(false){
+            //     console.log("yes it  is fasle")
+            //   }
+
+
+            }
+               
+     </script>
+    
+</body>
+</html>
