@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- 3)for in loop
+    4)break continue
+    5)switch case 
+    6)while do while  -->
+    <script>
+       
+
+       let personDetail ={
+             name:"ankita",
+             age:45,
+             address:"pune",
+             bikes:["hero","yamaha"],
+             education:"BCA",
+             mobile:3343334,
+       }
+        //  console.log(personDetail.age);
+       for(let x in personDetail){
+        
+             if(x === "bikes"){
+                 for(let y of personDetail[x]){
+                     console.log(y)
+
+                 }
+             }else{
+                console.log(x,"====",personDetail[x])
+             }
+
+       }
+    //    for(let y in personDetail){
+    //          console.log(personDetail[y]);
+             
+    //    }
+    //    for(let x of personDetail.bikes){
+    //           console.log("bikes",x)
+    //    }
+
+    </script>
+    
+</body>
+</html>
