@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>  
+
+        
+       <!--Introduction var let const scopes -->
+
+       <!-- global scope  -->
+         <!-- local sope -->
+         <!-- block scope -->
+    <script>
+        //global scope start
+        var varname ="code first";
+
+        function callName(){
+            // local sope start
+            var varlocalname = "pune"
+            console.log(varlocalname)
+            if(true){
+                // block scope start
+                console.log(varlocalname)
+                //block scope end
+            }
+             // local sope end
+        }
+        callName();
+        console.log(varlocalname)
+ //global scope end
+    </script>
+</body>
+</html>

@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //  global scope of var
+
+        // var vehicle; 
+        // console.log(vehicle);
+        //    function updateVehicle(){
+        //        vehicle = "BMW";
+        //        console.log(vehicle);
+        //    }
+        //    updateVehicle();
+        //    console.log(vehicle);
+
+
+
+        //local scope  of var
+
+        //   function callnewVehicle(){
+        //     var newveicle= "BMW";
+        //     console.log(newveicle);
+        //   }
+
+        //   callnewVehicle();
+        //   console.log(newveicle);   //not receive or not accessible
+
+
+         //re-declaration in local and globale scope
+         var sky ="blue";
+
+         function updateSky(){
+            var sky = "red";
+            console.log(sky);
+         }
+         updateSky();
+         console.log(sky);
+
+
+        //  above examples are same for let and var
+
+        //above exaples will workofor const only for array and objects
+
+
+    </script>
+    
+</body>
+</html>
