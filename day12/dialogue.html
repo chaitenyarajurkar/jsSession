@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- Dialog Boxes in JS -->
+    
+    <button onclick="callPrompt()">click to prpmpt </button>
+    <button onclick="callconfirm()">click to confirm </button>
+    <script>
+        // alert("Heelo world")
+
+        function callPrompt(){
+            let otp = prompt("Enter here","codefirst");
+        if(otp != null){
+
+            alert("yes got it");
+        }
+        }
+
+        function callconfirm(){
+            let person = confirm("Enter here","codefirst");
+        if(person){
+            alert("yes got it");
+        }
+        }
+
+    </script>
+</body>
+</html>
