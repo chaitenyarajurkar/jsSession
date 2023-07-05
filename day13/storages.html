@@ -1,15 +1,63 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
 </head>
 <body>
-   
-         
-   <script>
   
-   </script>
+  <script>
+   
+        //  string 
+        //  Number
+        //  boolean
+        // localStorage.setItem("name","code first");
+        // localStorage.setItem("isLogin",true);
+        // localStorage.setItem("mobilenumber",56565565);
+      
+      // =====================================================
+
+            // let name= localStorage.getItem("name");
+            // let isLogin= JSON.parse(localStorage.getItem("isLogin"));
+            // let mobile =JSON.parse(localStorage.getItem("mobilenumber"));
+        // console.log(typeof(name),typeof(isLogin),typeof(mobile));
+
+
+          // ===============================================================================
+
+            //     let number  = 98989;
+            //     console.log(typeof(JSON.stringify(number)));
+
+            // ===================================================================
+
+            
+
+            //  let personDetail = {name:"code first",address:"pune",id:"codefirst123"};
+
+
+            //  localStorage.setItem("persondetail",JSON.stringify(personDetail));
+
+
+               let personItem = localStorage.getItem("persondetail");
+
+               console.log(typeof(JSON.parse(personItem)));
+               localStorage.removeItem("persondetail")
+
+
+
+  </script>
 </body>
 </html>
+
+
+<!-- 
+methods for locastorage
+localStorage.removeItem()   //  it will remove particular key and its value
+setitems
+getitems
+clear()   //it will clear all data  in ls -->
+
+
+<!-- JOSN.parse >> used to convert string to particular data type -->
+<!-- JSON.stringify  >> any data type we can convert into string -->
