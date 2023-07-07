@@ -12,6 +12,17 @@
                 balance 
                 accountnumber -->
 
+                <form id="bankform">
+                    <input type="text" placeholder="Name" id="name" />
+                    <input type="number" placeholder="Initial deposite" id="initialdeposit" />
+                    <button type="submit" >Create Account</button>
+                </form>
+               <br />
+                <form id="withdrawForm">
+                    <input type="text" placeholder="account no." id="account" />
+                    <input type="number" placeholder="Amount" id="amountwithDraw" />
+                    <button type="submit" >Withdraw Amount</button>
+                </form>
          <script>
 
                 // let date = new Date();
@@ -19,7 +30,7 @@
 
                 // let date2 = Date.now();
                 // console.log(date2);
-
+               const accountData =[];
               function Bank(name, balance){
 
                     this.cutomerName = name;
@@ -36,15 +47,40 @@
 
               }
 
-              const nitinAccount = new Bank("Nitin",2000);
-              nitinAccount.deposite(2000);
-              nitinAccount.withdraw(1000);
-              console.log(nitinAccount);
+              const custName = document.getElementById("name");
+              const initialdeposit =document.getElementById("initialdeposit");
+              const formData = document.getElementById("bankform");
 
-              const anitaAccount  = new Bank("Anita",1000);
-              anitaAccount.deposite(3000);
-              anitaAccount.withdraw(500);
-              console.log(anitaAccount);
+              formData.addEventListener('submit',(e)=>{
+                e.preventDefault();
+                const newAccount  = new Bank(custName.value,+initialdeposit.value);
+                accountData.push(newAccount);
+                console.log("==>>>>>>",accountData)
+              })
+
+              
+              const account = document.getElementById("account");
+              const amountwithDraw = document.getElementById("amountwithDraw");
+              const withdrawForm  = document.getElementById("withdrawForm");
+              withdrawForm.addEventListener("submit",(e)=>{
+                e.preventDefault();
+                // account.value      amountwithDraw.value
+                    for(let x of accountData){
+                        if(+account.value === x.accountNumber){
+                               x.withdraw(+amountwithDraw.value);
+                        } 
+                    }
+                    console.log(accountData);
+
+
+              })
+
+
+ 
+
+
+            
+             
 
          </script>
 </body>
