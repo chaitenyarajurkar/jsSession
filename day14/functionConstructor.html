@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>     
+         <!-- function constructor -->
+         <!-- Bank > new account open 
+                name 
+                balance 
+                accountnumber -->
+
+         <script>
+
+                // let date = new Date();
+                // console.log(date);
+
+                // let date2 = Date.now();
+                // console.log(date2);
+
+              function Bank(name, balance){
+
+                    this.cutomerName = name;
+                    this.balance = balance;
+                    this.accountNumber = Date.now();
+
+                    this.deposite = function (amount){
+                        this.balance += amount;
+                    }
+
+                    this.withdraw = function (amount){
+                        this.balance -= amount;
+                    }
+
+              }
+
+              const nitinAccount = new Bank("Nitin",2000);
+              nitinAccount.deposite(2000);
+              nitinAccount.withdraw(1000);
+              console.log(nitinAccount);
+
+              const anitaAccount  = new Bank("Anita",1000);
+              anitaAccount.deposite(3000);
+              anitaAccount.withdraw(500);
+              console.log(anitaAccount);
+
+         </script>
+</body>
+</html>
