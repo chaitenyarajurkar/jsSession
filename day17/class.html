@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <script>
+
+        class Bank{
+            constructor(name,balance){
+                this.cutomerName = name;
+                this.balance = balance;
+                this.accountNumber = Date.now();
+            }
+
+            deposite(amount){
+                this.balance += amount;
+            }
+            withDraw(amount){
+                this.balance -= amount;
+            }
+        }
+
+        const newAccount  = new Bank("code first",20000);
+        newAccount.deposite(3000);
+        newAccount.withDraw(500);
+        console.log(newAccount);
+    </script>
+</body>
+</html>
