@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+         class Bank{
+            accountName;
+            #balance;
+            accoountNumber;
+            constructor(name,blance=0){
+                this.accountName=name;
+                this.#balance = blance;
+                this.accoountNumber= Date.now();
+            }
+
+            deposite(amount){
+                this.#balance += amount;
+            }
+            withDraw(amount){
+                this.#balance -= amount;
+            }
+
+            // eg:1 getter and setter
+            // getBalance(){
+
+            //     return this.#balance;
+            // }
+            // setBalance(amount){
+            //      this.#balance = amount;
+            // }
+
+
+            // eg:2
+            get getbalance() {
+                return  this.#balance;
+            }
+
+            set privatebalance(amount) {
+                 this.#balance = amount;
+            }
+
+
+            //private methods
+             
+            #getLoan(){
+                console.log("you are getting loan of 50000");
+            }
+
+            callPrivateMethod(){
+                this.#getLoan();
+            }
+        }
+
+        const newAccount  = new Bank("code first",5000);
+        newAccount.deposite(5000);
+        // newAccount.setBalance(8000);
+
+        // eg:1
+        // console.log(newAccount.getBalance())
+        // newAccount.setBalance(9000);
+
+         //eg:2
+        newAccount.privatebalance = 6000;
+        console.log(newAccount.getbalance);
+
+        newAccount.callPrivateMethod();
+
+
+
+
+
+
+
+
+
+
+
+         // function getName(){
+        //     return "chaitenya";
+        // }
+        // let name = getName();
+        // console.log(name);
+
+    </script>
+    
+</body>
+</html>

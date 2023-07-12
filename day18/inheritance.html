@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        class Bank{
+            constructor(name,blance=0){
+                this.accountName=name;
+                this.initialBalance = blance;
+                this.accoountNumber= Date.now();
+            }
+
+            deposite(amount){
+                this.initialBalance += amount;
+            }
+            withDraw(amount){
+                this.initialBalance -= amount;
+            }
+        }
+
+        const newAccount  = new Bank("code first",5000);
+        newAccount.deposite(5000);
+        newAccount.withDraw(2000);
+        console.log(newAccount);
+
+
+        class CurrentAccount extends Bank {
+            constructor(name,balance=0){
+                super(name,balance);
+            }
+            getusinessLoan(){
+                console.log("your loan got sanction of rs 50000");
+            }
+        }
+
+        const newCurrentAccount = new CurrentAccount("codeFirst",4000);
+        newCurrentAccount.withDraw(1000);
+        newCurrentAccount.getusinessLoan();
+
+        console.log(newCurrentAccount);
+
+
+        class SavingAccount  extends Bank{
+            constructor(name,balance=0){   
+                super(name,balance);
+            }
+            getPersonalLoan(){
+                console.log("your personal loan got sanction of rs 20000")
+            }
+
+        }
+
+        const newSavingAccount = new SavingAccount("codeFirst",1000);
+        newSavingAccount.getPersonalLoan();
+        console.log(newSavingAccount);
+
+
+
+     
+    </script>
+</body>
+</html>
