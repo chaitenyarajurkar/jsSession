@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- abstraction -->
+    <!-- class -->
+    <script>
+        //  function displayMEssage(message){
+        //         if(message){
+        //             console.log(message);
+        //         }
+        //         else{
+        //             throw new Error("message not receive");
+        //         }
+        //  }
+        //  displayMEssage();
+
+        class Bank {
+            constructor(){
+                console.log(this.constructor);
+                if(this.constructor === Bank){
+                    throw new Error("you cannot create instance of the class")
+                }
+
+            }
+            callMethod(){
+                console.log("bank method ")
+            }
+        }
+        class CuureAcc extends Bank{
+            callParentMethod(){
+                super.callMethod();
+            }
+        }
+        const c = new CuureAcc();
+        c.callParentMethod();
+    </script>
+</body>
+</html>

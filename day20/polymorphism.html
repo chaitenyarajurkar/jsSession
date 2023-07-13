@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- polymorphism -->
+        <!-- poly ==> many
+        morph ===>forms  -->
+    <script>
+
+        class Animal{
+           constructor(name){
+              this.name = name;
+           }
+            
+           eats(){
+            console.log(this.name+" eats food");
+           }
+        }
+
+        class Alligator extends Animal{
+
+            constructor(name,age){
+                super(name);
+               this.age= age;
+            }
+          
+            eats(){
+            console.log("child method  eats food");
+           }
+
+           callParentMethod(){
+              super.eats();
+           }
+
+        } 
+        const aligatr = new Alligator("Alligator",25);
+        aligatr.callParentMethod();
+          
+    </script>
+</body>
+</html>
