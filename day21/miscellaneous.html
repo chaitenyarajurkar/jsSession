@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <!-- types of function -->
+     <!-- there are three type of function
+    1. named function
+    2. Anonymous function 
+    3. Immediately invoked function expression -->
+
+    <script>
+        // eg: named function
+        //    These are thr basic function that having name
+      function add(){
+        console.log("named function ");
+      }
+      add();
+
+
+    //   2. Anonymous function 
+    // they dont have names
+    // they need to tied something
+       let isEvendOdd = function (num){
+             if(num % 2 ===0){
+                return "this is even number"
+             }else{
+                return "this is odd number"
+             }
+       }
+
+        console.log(isEvendOdd(26))
+
+
+// 3. Immediately invoked function expression
+    // it will call by itself
+       let message = (
+            function(){
+             return   "you got a message";
+            }
+       )();
+    //    let message = "you got a message";
+console.log(message);
+    </script>
+</body>
+</html>

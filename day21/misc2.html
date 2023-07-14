@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- callback function -->
+    <!--pass function in parametrised function -->
+
+
+    <script>
+        // eg : callback function
+     function add(num1,num2){
+            let total = num1 + num2;
+            showTotal(total);
+     }
+     function showTotal(total){
+        console.log(total);
+     }
+     add(23,45);
+
+     //eg: pass function in parametrised function
+
+     function addnew(num1,num2,showoutput){
+        let total = num1 + num2;
+        showoutput(total);
+     }
+     function showoutput(total){
+           console.log(total)
+     }
+     addnew(23,45,showoutput);
+    </script>
+    
+</body>
+</html>
